@@ -1,0 +1,65 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 28px;
+}
+
+#hero {
+    width: 660px;
+    margin: 0 auto 18px;
+}
+
+p, #footer {
+    color: #7d7987;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+p {
+    text-align: justify;
+}
+
+span, a {
+    color: #ff9100;
+}
+
+#footer a + a {
+    margin-left: 28px;
+}
+
+#line {
+    width: 660px;
+    height: 0px;
+    margin: 28px auto 8px;
+    border: 1px solid #ccc;
+}
+
+#myBtn {
+    /* display: none; */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ff9100;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }

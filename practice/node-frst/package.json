@@ -4,13 +4,15 @@
   "main": "test.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node ./src/test.ts"
+    "start": "node --env-file=.env --import=tsx --watch ./src/test.ts"
   },
   "author": "Igor",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^22.14.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   }
 }

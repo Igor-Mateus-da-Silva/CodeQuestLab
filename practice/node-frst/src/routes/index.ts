@@ -1,7 +1,10 @@
-import express from "express";
+import express, { RequestHandler } from "express";
 import produtosRouter from "./produtos";
+import { interferir } from "../middlewares/intervir";
 
 const router = express.Router();
+
+router.use(interferir);
 
 router.use("/produtos", produtosRouter);
 

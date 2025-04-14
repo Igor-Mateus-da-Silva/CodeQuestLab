@@ -1,21 +1,20 @@
-import { readFile, writeFile } from "fs/promises";
+import { readFile, unlink, writeFile } from "fs/promises";
 
 const exec = async () => {
-  console.log("Escrevendo arquivo");
+  const fileName = "./teste.txt";
+  const fileContent = await readFile(fileName, { encoding: "utf-8" });
 
-  const colors = ["red", "green", "blue", "yellow"];
-  const colorsTxt = colors.join("\n");
+  const list = fileContent.split("\n");
+  list.push("Hello World");
 
-  await writeFile("./teste.txt", colorsTxt);
+  const listTxt = list.join("\n");
+
+  await writeFile(fileName, listTxt);
   console.log("Pronto!");
 };
 
-const read = async () => {
-  const fileContent = await readFile("./teste.txt", { encoding: "utf-8" });
-
-  const list = fileContent.split("\n");
-  console.log(list);
+const deleteFile = async () => {
+  await unlink("./teste.txt");
 };
 
-// exec();
-read();
+exec();
